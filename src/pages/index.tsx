@@ -5,7 +5,7 @@ import { NextPageWithLayout } from "./page";
 
 const Home: NextPageWithLayout = () => {
   return (
-    <section className="p-8 flex flex-col h-screen w-full">
+    <section className="p-8 flex flex-col h-screen w-full bg-gradient-to-r from-cyan-500 to-blue-500">
       <h1 className="mx-auto text-2xl bg-gray-100 p-8 rounded-full text-gray-700 font-semibold">
         Bem vindo ao Projeto de Estrura do Next.js
       </h1>

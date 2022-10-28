@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { ISidebar, Sidebar } from "./Sidebar";
-import { mockSidebarProps } from "./Sidebar.mocks";
+import { ISidebar, Sidebar } from "./SideBar";
+import { mockSidebarProps } from "./SideBar.mocks";
 
 export default {
   title: "templates/Sidebar",

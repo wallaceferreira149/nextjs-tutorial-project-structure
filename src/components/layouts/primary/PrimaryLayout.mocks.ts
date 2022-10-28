@@ -1,7 +1,7 @@
 import { IPrimaryLayout } from "./PrimaryLayout";
 
 const base: IPrimaryLayout = {
-  sampleProps: "Ola Mundo",
+  children: "Elemento Teste",
 };
 
 export const mockPrimaryLayoutProps = {
