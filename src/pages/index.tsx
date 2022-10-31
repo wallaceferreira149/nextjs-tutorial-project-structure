@@ -1,22 +1,28 @@
-import { CatCard } from "../components/cards/cat/CatCard";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { PrimaryLayout } from "../components/layouts/primary/PrimaryLayout";
-import { Sidebar } from "../components/layouts/sidebar/SideBar";
+import { Search } from "../components/utilities/search/Search";
 import { NextPageWithLayout } from "./page";
 
 const Home: NextPageWithLayout = () => {
+  const { locale } = useRouter();
   return (
-    <section className="p-8 flex flex-col h-screen w-full bg-gradient-to-r from-cyan-500 to-blue-500">
-      <h1 className="mx-auto text-2xl bg-gray-100 p-8 rounded-full text-gray-700 font-semibold">
-        Bem vindo ao Projeto de Estrura do Next.js
-      </h1>
-      <CatCard
-        title="Gato siames"
-        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi perspiciatis blanditiis quos similique aperiam autem hic corporis non voluptatum, vel praesentium sint neque quia. Explicabo tempora ex nobis itaque."
-        author="Wallace"
-        time="01:22"
-        tag="lista"
+    <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
+      <Image
+        src="/Google.png"
+        alt="google logo"
+        width={272}
+        height={92}
+        priority
       />
-      {/* <CatCard {...mockCatCardProps.base} /> */}
+      <Search />
+      <p>
+        Google offered in:{" "}
+        <Link href="/" locale={locale === "en" ? "pt-br" : "en"}>
+          <a className="underline text-blue-600">Português</a>
+        </Link>
+      </p>
     </section>
   );
 };
@@ -24,10 +30,5 @@ const Home: NextPageWithLayout = () => {
 export default Home;
 
 Home.getLayout = (page) => {
-  return (
-    <PrimaryLayout>
-      <Sidebar />
-      {page}
-    </PrimaryLayout>
-  );
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };

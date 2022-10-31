@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { ReactNode } from "react";
+import { Footer } from "../../navigation/footer/Footer";
+import { Header } from "../../navigation/header/Header";
 
 export interface IPrimaryLayout {
   children: ReactNode;
@@ -9,9 +11,14 @@ export const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Primary Layout</title>
+        <title>Google Clone</title>
       </Head>
-      <main className="h-screen w-full flex bg-white">{children}</main>
+      <Header />
+      <main className="min-h-screen flex flex-col items-center">
+        {children}
+      </main>
+      <div className="m-auto" />
+      <Footer />
     </>
   );
 };
