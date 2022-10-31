@@ -1,3 +1,4 @@
+import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as NextImage from "next/image";
 import "../src/styles/global.css";
 
@@ -41,4 +42,7 @@ export const parameters = {
     },
   },
   viewports: { viewports: customViewports },
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
 };
