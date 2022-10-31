@@ -3,7 +3,7 @@ import { CatCard, ICatCard } from "./CatCard";
 import { mockCatCardProps } from "./CatCard.mocks";
 
 export default {
-  title: "templates/CatCard",
+  title: "Cards/CatCard",
   component: CatCard,
   args: {},
 } as ComponentMeta<typeof CatCard>;

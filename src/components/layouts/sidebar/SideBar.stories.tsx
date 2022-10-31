@@ -3,7 +3,7 @@ import { ISidebar, Sidebar } from "./SideBar";
 import { mockSidebarProps } from "./SideBar.mocks";
 
 export default {
-  title: "templates/Sidebar",
+  title: "layouts/Sidebar",
   component: Sidebar,
   args: {},
 } as ComponentMeta<typeof Sidebar>;
