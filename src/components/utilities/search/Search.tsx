@@ -1,13 +1,16 @@
+import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
 
 export interface ISearch {}
 
 export const Search: React.FC<ISearch> = () => {
-  const [searchItem, setSearchItem] = useState<string>();
+  const [searchTerm, setSearchTerm] = useState<string>("");
+
+  const router = useRouter();
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    alert(`Action requested. Search for: ${searchItem}`);
+    router.push(`/results?search=${searchTerm}`);
   }
 
   return (
@@ -18,7 +21,7 @@ export const Search: React.FC<ISearch> = () => {
       <input
         type="text"
         className="rounded-full border-2 w-5/6 sm:w-96 h-12 px-4"
-        onChange={(e) => setSearchItem(e.target.value)}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
       <div className=" space-x-3">
         <button
@@ -30,6 +33,10 @@ export const Search: React.FC<ISearch> = () => {
         <button
           className="border-0 p-2 px-6 bg-slate-100 rounded-md"
           type="submit"
+          onClick={(e) => {
+            e.preventDefault();
+            alert("FEATURE COMING SOON!");
+          }}
         >
           I&apos;m Feeling Lucky
         </button>
