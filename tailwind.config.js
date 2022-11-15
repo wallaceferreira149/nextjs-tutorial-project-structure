@@ -9,9 +9,18 @@ module.exports = {
       lg: "1200px",
       xl: "1536px",
     },
+    fontFamily: {
+      sans: ["Arial, sans-serif"],
+      serif: ["Garamond", "serif"],
+    },
     extend: {
-      fontFamily: {
-        sans: "Roboto, sans-serif",
+      colors: {
+        blue: {
+          500: "#1a73e8",
+        },
+      },
+      spacing: {
+        128: "32rem",
       },
     },
   },

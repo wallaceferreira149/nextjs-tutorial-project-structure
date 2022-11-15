@@ -20,7 +20,7 @@ export const Search: React.FC<ISearch> = () => {
     >
       <input
         type="text"
-        className="rounded-full border-2 w-5/6 sm:w-96 h-12 px-4"
+        className="rounded-full border-2 w-5/6 sm:w-128 h-12 px-4"
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       <div className=" space-x-3">
